@@ -16,31 +16,31 @@
 > Click on images to enlarge (if supported on GitHub)
 
 ### 🔐 Login Page
-<img src="./Web_Images/1.LoginPage.png" alt="Login Page" width="100%" />
+<img src="./Web_Images/1LoginPage.png" alt="Login Page" width="100%" />
 
 ### 🏠 Home Page (Top)
-<img src="./Web_Images/2-home-top.png" alt="Home Page Top" width="100%" />
+<img src="./Web_Images/2.HomePageTop.png" alt="Home Page Top" width="100%" />
 
 ### 🏠 Home Page (Bottom)
-<img src="./Web_Images/3-home-bottom.png" alt="Home Page Bottom" width="100%" />
+<img src="./Web_Images/3.HomePageBottom.png" alt="Home Page Bottom" width="100%" />
 
 ### 🍳 Recipes Page
-<img src="./Web_Images/4-recipes-page.png" alt="Recipes Page" width="100%" />
+<img src="./Web_Images/4.RecipesListPage.png" alt="Recipes Page" width="100%" />
 
 ### 🍽️ Recipe View Page
-<img src="./Web_Images/5-recipe-view-page.png" alt="Recipe View Page" width="100%" />
+<img src="./Web_Images/5.RecipeViewPage.png" alt="Recipe View Page" width="100%" />
 
 ### 🔎 Search Page
-<img src="./Web_Images/6-search-page.png" alt="Search Page" width="100%" />
+<img src="./Web_Images/6.RecipesSearchPage.png" alt="Search Page" width="100%" />
 
 ### 🧾 Item Searching Page
-<img src="./Web_Images/7-item-searching-page.png" alt="Item Searching Page" width="100%" />
+<img src="./Web_Images/7.RecipeSearchPage.png" alt="Item Searching Page" width="100%" />
 
 ### 🍲 Searched Item View Page
-<img src="./Web_Images/8-searched-item-view-page.png" alt="Searched Item View Page" width="100%" />
+<img src="./Web_Images/8.SearchedRecipeViewPage.png" alt="Searched Item View Page" width="100%" />
 
 ### 💔 Empty Wishlist Page
-<img src="./screenshots/9-empty-wishlist.png" alt="Empty Wishlist Page" width="100%" />
+<img src="./screenshots/9.EmptyWishlistPage.png" alt="Empty Wishlist Page" width="100%" />
 
 ---
 
