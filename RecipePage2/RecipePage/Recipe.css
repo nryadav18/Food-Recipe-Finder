@@ -1,0 +1,877 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    user-select: none;
+    font-family: "Oswald", sans-serif;
+}
+body{
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(124,124,124);
+    background: radial-gradient(circle, rgba(124,124,124,1) 8%, rgba(91,91,91,1) 21%, rgba(64,64,64,1) 32%, rgba(56,56,56,1) 44%, rgba(48,48,48,1) 55%, rgba(39,39,40,1) 64%, rgba(30,30,31,1) 74%, rgba(24,24,25,1) 82%, rgba(21,21,22,1) 91%, rgba(16,16,17,1) 100%);
+}
+.main{
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    width: 100%;
+    height: 13%;
+    /* box-shadow: 0 0 .4rem .4rem #FF8225; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    
+}
+.categoryName{
+        width: 30%;
+        height: 100%;
+}
+.itemName{
+    width: 70%;
+    height: 100%;
+}
+.categoryName , .itemName{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.categoryName p , .itemName p{
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+}
+.middle{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    /* border: 2px solid orange; */
+}
+.categories{
+    height: 100%;
+    width: 30.05%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 20px;
+    position: relative;
+}
+.categories::-webkit-scrollbar{
+    display: none;
+}
+.fa-x{
+    color: white;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.catButton  {
+    height: 70px;
+    width: 200px;
+    /* box-shadow: 0 0 .4rem .2rem #FF8225; */
+    border-radius: 1rem;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    
+}
+.catBut{
+    height: 80px;
+    width: 200px;
+    display: flex;
+    border: 2px solid #FF8225 ;
+    border-radius: 1rem;
+    background-color: white;
+}
+.fa-xmark{
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transition: all 0.1s;
+}
+
+.catBut .catName p{
+    text-align: center;
+    font-size: 1.1rem;
+}
+.catPhoto{
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+}
+.catPhoto img{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.catButton:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 27px -5px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+}
+.catButton:hover img{
+    cursor: pointer;
+    
+}
+
+.catName{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.name , .na{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    /* font-weight: 600; */
+}
+
+.bottom{
+    height: 12%;
+    width: 100%;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.items{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card_container{
+    height: 90%;
+    width: 90%;
+    /* border: 1px solid black; */
+    display: flex;  
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 10px;
+    justify-content: space-evenly;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+    opacity: 1;
+    transition:  all 0.5s;
+}
+.card_container::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    height: 250px;
+    width: 190px;
+    /* border: 2px solid black; */
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 .4rem .4rem rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.photo{
+    height: 70%;
+    width:100%;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+.cover{
+    height: 100%;
+    width: 100%;
+    background-color: #FF8225;
+    border-radius: 1rem ;
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction:column;
+    gap: 5px;
+    opacity: 0;
+    transition: all 1s;
+    padding: 15px;
+}
+.photo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+.photo i{
+    font-size: 1.7rem;
+    position: absolute;
+    top: 10px;
+    color: white;
+    right: 10px;
+    z-index: 10;
+    /* font-weight: 300; */
+}
+.button{
+    margin-left: 3%;
+    margin-top: 0px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    /* font-weight:600; */
+   border-radius: 0.6rem;
+}
+.button i{
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+.content{
+    height: 30%;
+    width: 100%;
+    border: 2px solid white;
+}
+.region{
+    font-size: 1.2rem;
+    /* font-weight: 600; */
+}
+.fa-arrow-right{
+    /* color: white; */
+}
+.add , .filter{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    /* border: 2px solid ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    box-shadow: 0 0 .4rem .4rem rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right:60px;
+    bottom: 100px;
+    z-index: 110;
+    background-color: white;   
+    color: #222325;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.filter{
+    height: 45px;
+    width: 45px;
+    display: none;
+}
+.fa-heart:active {
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+}
+
+ .fa-regular:hover{
+    cursor: pointer;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card:hover img{
+    scale: 1.2; 
+    transition: all 0.4s;  
+}
+.card:hover .cover{
+    opacity: 1;
+    transition: all 0.4s;
+   
+}
+/* .photo:hover{
+    height: 60%;
+    cursor: pointer;
+} */
+.fa-star{
+    margin-top: 5px;
+    margin-left: 1px;
+    color: #FF8225;
+}
+
+.sideCat{
+    height: 98.7%;
+    width: 0%;
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    transition: all 0.5s;
+    display: none;
+
+}
+
+.head{
+    height: 10%;
+    width: 100%;
+    background-color: #222325;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    justify-content: right;
+    /* font-weight: 600; */
+    color: white;
+    overflow: hidden;
+}
+
+.side{
+    padding-top: 30px ;
+    padding-left: 30px ;
+    height: 80%;
+    width: 100%;
+    /* border: 2px solid #FF8225 ; */
+    backdrop-filter:blur(300px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+    
+}
+.side::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    12.5%{
+        transform: rotate(20deg);
+    }
+    25% {
+      transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    75% {
+      transform: rotate(-30deg);
+    }
+  }
+
+
+.container {
+    /* background-image: url(../assets/WhatsApp\ Image\ 2024-07-26\ at\ 10.37.42_9f8eb190.jpg); */
+    background-size:c;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 90%;
+    max-width: 600px;
+    overflow-y: scroll;
+    position: absolute;
+    bottom: 68px;
+    left: 30%;
+    z-index: 1000000;
+    scale: 0;
+    height: 0%;
+    transition: all 0.5s;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color:#FF8225;
+    /* font-weight: 600; */
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    max-width: 100%;
+    outline: none;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.form-group input[type="number"] {
+    width: 80px;
+    text-align: center;
+}
+.form-group textarea {
+    height: 100px;
+}
+.form-group button {
+    background-color: #FF8225;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    /* font-weight: 600; */
+    outline: none;
+    border: 2px solid #222325;
+    transition: all 0.5s;
+}
+.form-group button:hover {
+    background-color: #FF8225;
+    outline: none;
+    border: 2px solid #222325;
+    transition: all 0.5s;
+}
+.error {
+    color: red;
+    font-size: 0.875em;
+}
+center p{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom:20px ;
+    color: white;
+}
+
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0px;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+  }
+  
+  button.learn-more {
+    width: 7rem;
+    height: auto;
+  }
+  
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    /* box-shadow: 0 0 5px 1px white; */
+    position: relative;
+    display: block;
+    margin: 5px 0px;
+    width:2rem;
+    height: 2.2rem;
+    background: #282936;
+    border-radius: 1.625rem;
+  }
+  
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  
+  button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.1rem;
+    width: 1rem;
+    height: 0.125rem;
+    background: none;
+  }
+  
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+  
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* padding: 0.75rem 0.1rem; */
+    margin: 0 0 0 2rem;
+    color: black;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ .card:hover .circle {
+    width: 103%;
+    /* box-shadow: 0 0 10px 2px white; */
+  }
+  
+ .card:hover .button-text {
+    transform: translate(-1.7rem, 0);
+  }
+  
+  .card:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(5.4rem, 0);
+  }
+  
+  button:active .circle .icon.arrow {
+    transform: translate(5rem, 0);
+    transition: all 0.3s;
+  }
+  
+  button:active .circle  {
+    transform: scale(0.9);
+    transition: all 0.3s;
+    box-shadow: 0 0 5px 0.5px white;
+  }
+  button:active .button-text{
+    scale: 0.8;
+    transition: all 1s;
+  }
+ .card:hover .button-text {
+    font-weight: 0;
+    color: #fff;
+  }
+
+  @media screen and ( (min-width:700px ) and (max-width:2000px)) {
+    .container{
+        background-color: white;
+    }
+    .container .fa-x{
+        color:black;
+    }
+    .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 2px solid #FF8225;
+            box-sizing: border-box;
+            max-width: 100%;
+            color: black;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+        .container .button{
+            background-color: #FF8225;
+        }
+        center p{
+            color: #FF8225;
+        }
+        
+  }
+  @media screen and ( (min-width:1050px ) and (max-width:1500px)) {
+    .sideCat{
+        display: none;
+    }
+    .categories , .categoryName{
+        width: 40%;
+        gap: 20px;
+    }
+    .items , .itemName{
+        width: 60%;
+    }
+    .catButton{
+        width: 9.9rem;
+    }
+    .card{
+        width: 15rem;
+        height: 23rem;
+    }
+    .card_container{
+        width: 95%;
+    }
+    .catButton{
+        height: 7rem;
+        width: 16.5rem;
+    }
+    .name{
+        font-size: 1.9rem;
+        /* text-align: center; */
+    }
+    .itemName p , .categoryName p{
+        font-size: 4.5rem;
+        /* color: red; */
+    }
+    .add{
+        height: 6rem;
+        width: 6rem;
+        font-size: 3rem;
+    }
+    	.cover .name{
+            font-size: 2rem;
+        }
+        .fa-star{
+            font-size: 1.4rem;
+        }
+        .region{
+            font-size: 1.8rem;
+        }
+        
+    }
+  
+@media screen and ( (min-width:1001px) and (max-width:1050px)) {
+    .sideCat{
+        display: none;
+    }
+    .categories , .categoryName{
+        width: 35%;
+        gap: 10px;
+    }
+    .items , .itemName{
+        width: 65%;
+    }
+    .catButton{
+        width: 9.9rem;
+    }
+    .card{
+        width: 10.9rem;
+    }
+    .top{
+        height: 10%;
+        width: 100%;
+    }
+    .middle{
+        width: 100%;
+    }
+    .add{
+        height: 4rem;
+        width: 4rem;
+        right: 30px;
+    }
+    .card_container{
+        width: 95%;
+    }
+    .container{
+        background-color: white;
+    }
+
+}
+
+@media screen and ( ( min-width:501px ) and ( max-width: 1000px ) ) {
+    .sideCat{
+        display: none;
+    }
+    .categories , .categoryName{
+        width: 45%;
+        height: 100%;
+        gap: 10px;
+        /* overflow: visible;
+        overflow-y: scroll; */
+    }
+    .items , .itemName{
+        width: 55%;
+    }
+    .catButton{
+        width: 140px;
+    }
+    .card{
+        width: 10rem;
+    }
+    .add{
+        right: 20px;
+        bottom: 80px;
+    }
+    .top{
+        height: 10%;
+    }
+    .itemName p , .categoryName p{
+        font-size: 2.5rem;
+        /* color: red; */
+    }
+    .container{
+        width: 70%;
+        left:15%;
+        background-color: white;
+        
+    }
+    center p{
+        font-size: 1.8rem;
+    }
+}
+
+
+@media screen and ((min-width:300px) and (max-width:500px)) {
+    .categories , .categoryName , .categories p{
+        width: 0%;
+        z-index: 1000;
+        display: none;
+    }
+    .add{
+        left: 20px;
+        bottom: 70px;
+    }
+    .filter .add{
+        display: flex;
+        right: 30px;
+        bottom: 80px;
+        font-size: 1.4rem;
+        color: black;
+        scale: 1;
+    }
+    .card_container{
+        height: 100%;
+        width: 100%;
+        gap: 25px;
+    }
+    .filter{
+        display: flex;
+        color: black;
+        font-size: 1rem;
+        right: 15px;
+        bottom: 70px;
+    }
+    .items{
+        width: 100%;
+    }
+    .top{
+        position: relative;
+    }
+    .photo i{
+        top: 5px;
+        right: 5px;
+        font-size: 1.4rem;
+        margin-bottom: 100px;
+    }
+    .sideCat{
+        display: block;
+        left: -100px;
+    }
+    .container{
+        bottom: 70px;
+        left: 0px;
+        height:0%;
+        width:82%;
+        scale: 0;
+    }
+    .container button{
+        background-color: #FF8225;
+    }
+    center p{
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen  and ((min-width:300px) and (max-width:370px)) {
+    .top{
+        height: 10%;
+    }
+    .card{
+        width:9.8rem;
+        height: 12.5rem;
+    }
+    .itemName p{
+        font-size: 2.5rem;
+    }
+    .photo{
+        height: 65%;
+    }
+    .name{
+        font-size: 0.9rem;
+    }
+    .region{
+        font-size:1rem;
+    }
+    button.learn-more .button-text {
+        font-size: 0.9rem;
+    }
+    .name{
+        font-size:1.1 rem ;
+    }
+    .fa-star{
+        font-size: 1rem;
+    }
+  
+}
+
+@media screen and ((min-width:370px) and (max-width:500px)) {
+    .itemName p{
+        font-size: 2.5rem;
+    }
+    .card{
+        width: 10rem;
+        height: 14rem;
+    }
+    .photo{
+        height: 70%;
+    }
+    .name{
+        font-size: 0.8rem;
+    }
+    .region{
+        font-size: 1rem;
+    }
+    .cover .name{
+        font-size: 1rem;
+    }
+    button.learn-more .button-text {
+        font-size: 0.9rem;
+    }
+    .add , .filter{
+        bottom: 5rem;
+        height: 3rem;
+        width: 3rem;
+    }
+    .filter{
+        font-size: 1.5rem;
+    }
+    .sideCat{
+        height: 99.1%;
+    }
+    
+}

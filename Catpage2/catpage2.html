@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../RecipePage/Recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        flex-direction: column;
+        gap: 10px;
+        color: white;
+      
+    }
+    .card_container{
+        border: 2px solid orange;
+        width: 70%;
+        height: 80%;
+        padding: 20px;
+    }
+    .fa-heart{
+        color: red !important;
+        font-weight: 600;
+    }
+    .name{
+        color: black;
+    }
+    h1{
+        align-content: center;
+    }
+    @media screen and ((max-width : 450px)) {
+        .card_container{
+            height: 80%;
+            width: 90%;
+            gap: 15px !important;
+        }
+        h1{
+            font-size: 1.4rem;
+        }
+        .card{
+            height: 190px;
+            width: 130px !important;
+        }
+        .card .name{
+            font-size: 12.65px !important;
+        }
+        .fa-star{
+            font-size: 0.9rem;
+        }
+        .photo{
+            height: 70%;
+        }
+    }
+</style>
+<body onload="fun()" onchange="onchaged()">
+   <center><h1>Your Desired Dishes Are Displayed Here!</h1></center> 
+    <div class="card_container" id="cnt"></div>
+</body>
+<script src="./catpage2.js"></script>
+<!-- <script src="../RecipePage/Recipe.js"></script> -->
+ <!-- <img src="" alt=""> -->
+</html>

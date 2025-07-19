@@ -1,0 +1,1007 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    user-select: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+#home{
+    background-color: #222325;
+    height: 100svh;
+    width: 100svw;
+    position: relative;
+    overflow-y: scroll;
+}
+#home::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    height: 15svh;
+    width: 100svw;
+    display: flex;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    z-index: 9;
+    transition: all 0.5s ease;
+}
+.logo{
+    height: 100%;
+    width: 20svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    gap: 30px;
+    font-size: 18px;
+    line-height: 1.5rem;
+    overflow: hidden;
+}
+.logo p{
+    transition: all 0.5s ease;
+    overflow-y: hidden;
+}
+.logo p span{
+    font-size: 18px;
+}
+.logo > img{
+    height: 100px;
+    width: 100px;
+}
+.logo > img:hover{
+    animation: rotateLogo 0.6s ease-in-out 1;
+    filter: drop-shadow(0px 0px 5px black);
+}
+.logo > p:hover{
+    transition: all 0.5s ease;
+    transform: scale(1.06);
+    cursor: pointer;
+    text-shadow: 0px 0px 5px black;
+    span{
+        color: #FF8225;
+    }
+}
+.mainhead{
+    height: 100%;
+    width: 65svw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+.mainhead > p > a{
+    text-decoration: none;
+}
+.mainhead > p:hover{
+    cursor: pointer;
+    color: #FF8225;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+    a{
+        color: #FF8225;
+    }
+}
+.mainLeft{
+    position: fixed;
+    backdrop-filter: blur(10px);
+    top: 0%;
+    height: 120svh;
+    width: 0px;
+    z-index: 10;
+    overflow: hidden;
+}
+.mainLeft > .mainhead > i:nth-child(1):hover{
+    color: #FF8225;
+}
+.mainLeft > .mainhead{
+    justify-content: start;
+    gap: 40px;
+    width: 320px;
+}
+.nbbutton{
+    width: 130px;
+    height: 50px;
+}
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+    position: relative;
+}
+.but {
+    border-style: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    transition: .5s linear;
+    background-color: #FF8225;
+    box-shadow: 0px 0px 3px #f3f3f3;
+    padding-right: 40px;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.but::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background: linear-gradient(90deg,transparent,rgba(255, 255, 255, 0.8),transparent);
+    left: -100%;
+    animation: slide-in 1.5s ease infinite;
+}
+
+.but::placeholder, .but {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
+
+.but p{
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-family: "Playwrite AT", cursive;
+    transition: .5s linear;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 800;
+    outline: none;
+    border-style: none;
+    border-radius: 50%;
+    pointer-events: painted;
+    background-color: transparent;
+    transition: .5s linear;
+    right: 13%;
+    z-index: 10;
+}
+.icon:hover ~ .but , .but:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+    width: 120px;
+    border-radius: 30px;
+    background-color: #FF8225;
+    border-bottom: 3px solid #FF8225;
+    transition: all 0.5s ease;
+    p{
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+}
+
+
+
+
+.icons{
+    height: 100%;
+    width: 15svw;
+    display: flex;
+    font-size: 22px;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.2s ease;
+
+    i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        overflow: hidden;
+        font-size: 1.7rem;
+    }
+}
+.icons > i:hover{
+    color: #FF8225;
+    transition: all 0.2s ease;
+}
+.icons > i:nth-child(1):hover{
+    color: red ;
+}
+.icons i:nth-child(3){
+    display: none;
+}
+.icons i:nth-child(1):hover, .icons i:nth-child(2):hover{
+    transform: scale(1.15);
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: vibrate .2s linear 2;
+}
+
+.logout{
+    height: 50px;
+    width: 50px;
+    /* background-color: #FF8225; */
+    border-radius: 40px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+}
+.logout i:hover{
+    cursor: pointer;
+    color: #FF8225;
+}
+
+
+
+.cbody{
+    margin-top: 70px;
+    height: 100svh;
+    width: 100svw;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cbleft{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    span{
+        color: #FF8225;
+    }
+}
+.cbright{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.cir{
+    height: 370px;
+    width: 370px;
+    border-radius: 50%;
+    background-color: #FF8225;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    transition: all 0.5s ease;
+}
+.cir > img{
+    z-index: 5;
+    height: 370px;
+    width: 370px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.cbright > img:nth-child(2){
+    height: 110px;
+    width: 150px;
+    position: absolute;
+    animation: burger 0.8s ease, movement 3s linear infinite;
+    top: 10%;
+    left: 5%;
+}
+.cbright > img:nth-child(3){
+    height: 110px;
+    width: 150px;
+    position: absolute;
+    animation: pizza 0.8s ease, movement 3s linear infinite;
+    top: 72%;
+    left: 72%;
+}
+.cbright > img:nth-child(4){
+    height: 110px;
+    width: 150px;
+    position: absolute;
+    animation: biriyani 0.8s ease, movement 3s linear infinite;
+    top: 10%;
+    left: 72%;
+}
+.cbright > img:nth-child(5){
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    animation: icecream 0.8s ease, movement 3s linear infinite;
+    top: 70%;
+    left: 5%;
+}
+.last{
+    height: 40svh;
+    width: 100svw;
+    text-align: center;
+    align-content: center;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    overflow: hidden;
+}
+.one{
+    height: 200px;
+    width: 250px;
+    font-size: 20px;
+    text-align: start;
+    align-content: center;
+    p{
+        margin-left: 100px;
+    }
+    span{
+        font-size: 15px;
+        opacity: 0.7;
+    }
+    p:nth-child(1){
+        margin-bottom: 20px;
+    }
+}
+.two{
+    height: 200px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.tleft{
+    height: 70%;
+    width: 90px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: #FF8225;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px black;
+}
+.tleft > img{
+    height: 110px;
+    width: 200px;
+    transition: all .3s ease;
+}
+.tleft:hover{
+    img{
+        transition: all .3s ease;
+        transform: scale(1.18);
+        cursor: pointer;
+    }
+}
+.tright{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.trtop{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.trtc{
+    height: 40px;
+    width: 40px;
+    background-color: #FF8225;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0px 0px 9px #FF8225;
+    transition: all 0.3s ease;
+}
+.trtc > img{
+    height: 100%;
+    width: 100%;
+}
+.trtc:hover{
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 12px #FF8225;
+    cursor: pointer;
+}
+.trbottom{
+    height: 50%;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    align-content: start;
+    span{
+        font-size: 15px;
+        opacity: 0.7;
+    }
+}
+.three{
+    height: 200px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.three > .tleft{
+    height: 70px;
+    width: 160px;
+}
+.tdown{
+    p{
+        font-size: 27px;
+        line-height: 1.8rem;
+    }
+    span{
+        font-size: 16px;
+        opacity: 0.7;
+    }
+}
+
+footer{
+    height: 40svh;
+    width: 100svw;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.fleft,.fmid,.fright{
+    height: 30svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.fleft{
+    width: 300px;
+    position: relative;
+}
+.fleft > img:nth-child(1){
+    height: 80px;
+    width: 80px;
+}
+.fleft > img:nth-child(2){
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    transition: all 1s ease;
+    animation: rotateLogo 7s linear infinite;
+}
+.fmid{
+    width: 600px;
+    p{
+        font-size: 30px;
+        text-align: left;
+        align-content: left;
+    }
+    span{
+        text-decoration: none;
+        font-size: 20px;
+        opacity: 0.6;
+    }
+}
+.fright{
+    width: 550px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+}
+.frtop{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 70px;
+}
+.sm{
+    height: 40px;
+    width: 110px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+#linkedin{
+    background-color:#0a66c2;
+    p{
+        transition: all .2s ease;
+    }
+}
+#insta{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+#fb{
+    background-color: #0d358c;
+}
+#twitter{
+    background-color: black;
+}
+#telegram{
+    background-color: #0088cc;
+    p{
+        transition: all .2s ease;
+    }
+}
+#gmail{
+    background-color: red;
+}
+.smb{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    transition: all .4s ease;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    i{
+        margin-left: 10.3px;
+        font-size: 20px;
+    }
+    p{
+        width: 0%;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%,-50%);
+        transition: all .3s ease;
+        font-weight: 900;
+    }
+}
+.smb::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg,transparent,rgba(255, 255, 255, 0.8),transparent);
+    left: -100%;
+    animation: slide-in 2s ease infinite;
+}
+.smb:hover{
+    width: 150px;
+    border-radius: 50px;
+    transition: all .4s ease;
+    p{
+        width: 100%;
+        transition: all .6s ease;
+    }
+}
+.frbottom{
+    height: 20%;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+
+/* Animations */
+
+@keyframes slide-in{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes rotateLogo{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+@keyframes vibrate{
+    0%{    
+        rotate: -10deg;
+    }
+    50%{
+
+        rotate: 10deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes burger{
+    from{
+        transform: rotate(-10deg);
+        top: 40%;
+        left: 40%;
+    }
+    to{
+        top: 10%;
+        left: 5%;
+    }
+}
+
+@keyframes pizza{
+    from{
+        transform: rotate(-10deg);
+        top: 40%;
+        left: 40%;
+    }
+    to{
+        top: 72%;
+        left: 72%;
+    }
+}
+
+@keyframes biriyani{
+    from{
+        transform: rotate(-10deg);
+        top: 40%;
+        left: 40%;
+    }
+    to{
+        top: 10%;
+        left: 72%;
+    }
+}
+
+@keyframes icecream{
+    from{
+        transform: rotate(-10deg);
+        top: 40%;
+        left: 40%;
+    }
+    to{
+        top: 70%;
+        left: 5%;
+    }
+}
+
+@keyframes movement{
+    0%{    
+        rotate: 0deg;
+    }
+    25%{
+        rotate: -5deg;
+    }
+    50%{
+        rotate: 0deg;
+    }
+    75%{
+        rotate: 5deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1400px){
+    footer{
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .cbody{
+        height: 93svh;
+    }
+    .cir{
+        height: 270px;
+        width: 270px;
+        img{
+            height: 270px;
+            width: 270px;
+        }
+    }
+    footer{
+        height: 70svh;
+    }
+}
+
+@media only screen and (max-width: 1199.5px){
+    .cbody{
+        height: 95svh;
+    }
+    .last{
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    #biriyani{
+        height: 105px;
+        width: 125px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .logo{
+        gap: 20px;
+        font-size: 15px;
+    }
+    .logo p span{
+        font-size: 20px;
+    }
+    .logo > img{
+        height: 80px;
+        width: 80px;
+    }
+    .mainhead{
+        font-size: 16px;
+    }
+    .mainhead > p:hover{
+        transform: scale(1.07);
+    }
+    .nbbutton{
+        width: 110px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .input-wrapper {
+        height: 50px;
+        width: 100px;
+    }
+    .but {
+        height: 40px;
+        width:40px;
+    }
+    .but::placeholder, .but {
+        font-size: 14px;
+    }
+    .icon {
+        font-size: 20px;
+    }
+    .icons{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    #home{
+        height: fit-content;
+    }
+    .cbody{
+        height: 150svh;
+        gap: 0px;
+    }
+    .cbleft, .cbright{
+        width: 100svw;
+    }
+    .cbleft{
+        height: 70svh;
+    }
+    .cbright{
+        height: 80svh;
+    }
+    footer{
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width:750px){
+    header{
+        justify-content: space-between;
+    }
+    header > .mainhead{
+        display: none;
+    }
+    .logo{
+        gap: 50px;
+        width: 40svw;
+    }
+    .icons{
+        width: 35svw;
+        font-size: 22px;
+    }
+    .icons i:nth-child(3){
+        display: block;
+    }
+    .mainLeft > .mainhead{
+        transition: all 0.5s ease;
+        background-color: rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        align-items: center;
+    }
+    .mainhead .but{
+        width: 120px;
+        p{
+            opacity: 1;
+        }
+    }
+    .cbody{
+        height: fit-content;
+    }
+    .cbleft, .cbright{
+        width: 100%;
+    }
+    .last{
+        gap: 0px;
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .last{
+        gap: 0px;
+        position: relative;
+    }
+    .one{
+        height: 150px;
+        flex-direction: row;
+        width: 100svw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        gap: 100px;
+        p{
+            margin-left: 0px;
+        }
+        p:nth-child(1){
+            margin-top: 20px;
+        }
+    }
+    .two, .three{
+        width: 100svw;
+    }
+    .trbottom{
+        display: flex;
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+@media only screen and (max-width:530px){
+    header{
+        justify-content: center;
+    }
+    .logo{
+        width: 50svw;
+        gap: 50px;
+    }
+    .logo > img{
+        height: 60px;
+        width: 60px;
+    }
+    .logo > p{
+        font-size: 13px;
+        line-height: 1rem;
+    }
+    .logo > p > span{
+        font-size: 15px;
+    }
+    .icons{
+        width: 50svw;
+    }
+    #home{
+        height: fit-content;
+    }
+    .cbody{
+        height: 135svh;
+        gap: 0px;
+    }
+    .cbleft{
+        height: 50svh;
+        font-size: 62px;
+    }
+    .cbright{
+        height: 70svh;
+    }
+    .cir{
+        height: 240px;
+        width: 240px;
+        img{
+            height: 240px;
+            width: 240px;
+        }
+    }
+    .cbright > img:nth-child(2){
+        height: 90px;
+        width: 110px;
+    }
+    .cbright > img:nth-child(3){
+        height: 90px;
+        width: 110px;
+    }
+    #biriyani{
+        height: 80px;
+        width: 100px;
+    }
+    .cbright > img:nth-child(5){
+        height: 90px;
+        width: 90px;
+    }
+    .last{
+        height: fit-content;
+    }
+    .two > .tleft{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:475px){
+    .fmid{
+        height: fit-content;
+        p{
+            text-align: center;
+            align-content: center;
+        }
+    }
+    .fright{
+        height: fit-content;
+    }
+    .frtop{
+        height: fit-content;
+        row-gap: 40px;
+    }
+}
+
+@media only screen and (max-width:375px){
+    #home{
+        height: fit-content;
+    }
+    .cbody{
+        height: 145svh;
+    }
+    .cbleft{
+        font-size: 55px;
+        height: 60svh;
+    }
+    .cbright{
+        height: 80svh;
+    }
+    .cir{
+        height: 230px;
+        width: 230px;
+        img{
+            height: 230px;
+            width: 230px;
+        }
+    }
+    .cbright > img:nth-child(2){
+        height: 70px;
+        width: 98px;
+    }
+    .cbright > img:nth-child(3){
+        height: 70px;
+        width: 98px;
+    }
+    #biriyani{
+        height: 70px;
+        width: 80px;
+    }
+    .cbright > img:nth-child(5){
+        height: 70px;
+        width: 90px;
+    }
+}

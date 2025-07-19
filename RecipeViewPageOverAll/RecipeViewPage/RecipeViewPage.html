@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="RecipeViewPage.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body onload="onloadd()">
+    <div class="main6">
+            <div class="main6_left">
+               <div class="left6_up">
+                <div class="video6">
+                    <iframe width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="gif"></iframe>
+                    <!-- <video   controls >
+                        <source  src="../assets/videos" height="100%" width="100%" type="video/mp4" class="gif">
+                    </video> -->
+                </div>
+                <div class="btns6">
+                    <i class="fa-solid fa-thumbs-up" id="icon61" style="color:white" onclick="like(event)"></i>
+                    <i class="fa-solid fa-thumbs-down" id="icon62"  style="color:white" onclick="dislike(event)"></i>
+                </div>
+                <div class="input6">
+                    <form>
+                 <label>comments</label>
+               <div class="com">  <input placeholder="Type Here" id="in" />
+                <button  type="submit" onclick="cmt6('in',event)" class="btn6">submit</button></div>
+                </form>
+                </div>
+               </div>
+               <div class="left6_down">
+                <div class="comments6">
+                    <div class="cmt1">
+                        <div class="cmt_left"><i class="fa-solid fa-user" id="icon63"></i></div>
+                        <div class="cmt_right">
+                            <div class="usr_id">N R Maya</div>
+                            <div class="usr_cmt">Meedhi Motham 1000 Ayyindhi. Two Livers Extra</div>
+                        </div>
+                    </div>
+                    <div class="cmt1">
+                        <div class="cmt_left"><i class="fa-solid fa-user" id="icon63"></i></div>
+                        <div class="cmt_right">
+                            <div class="usr_id">Deepthi</div>
+                            <div class="usr_cmt">Ranilemma Ranilemma Rani Rani Rani!</div>
+                        </div>
+                    </div>
+                    <div class="cmt1">
+                        <div class="cmt_left"><i class="fa-solid fa-user" id="icon63"></i></div>
+                        <div class="cmt_right">
+                            <div class="usr_id">Manikanta</div>
+                            <div class="usr_cmt">Y not 175 Recipes!</div>
+                        </div>
+                    </div>
+                    <div class="cmt1">
+                        <div class="cmt_left"><i class="fa-solid fa-user" id="icon63"></i></div>
+                        <div class="cmt_right">
+                            <div class="usr_id">Abhi Ram</div>
+                            <div class="usr_cmt">Nako Garita Etthara! (Thoda Garite Leke Aajaav)</div>
+                        </div>
+                    </div>
+                    <div class="cmt1">
+                        <div class="cmt_left"><i class="fa-solid fa-user" id="icon63"></i></div>
+                        <div class="cmt_right">
+                            <div class="usr_id">Chandrasekhar</div>
+                            <div class="usr_cmt">Bagundhanna Nijamga Bagundhanna!</div>
+                        </div>
+                    </div>
+                    <div class="cmt1">
+                        <div class="cmt_left"><i class="fa-solid fa-user" id="icon63"></i></div>
+                        <div class="cmt_right">
+                            <div class="usr_id">Sai Chandu</div>
+                            <div class="usr_cmt">Rey Rey Evarra Merantha!</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+            </div>
+            <div class="main6_right">
+                <div class="right6_up">
+                    <img src="" alt="" class="img6">
+                    <div class="up6_tittle"></div>
+                </div>
+                <div class="right6_middle">
+                    <div class="ingrediants6">Ingrediants</div>
+                    <div class="ing6_data" style="word-spacing: .1rem;  font-size: 18px; font-family: Mukta, sans-serif;"></div>
+                </div>
+                <div class="right6_bottom">
+                    <div class="procedure6">Procedure</div>
+                    <div class="process6_data" style="font-family: Mukta, sans-serif;"></div>
+                </div>
+            </div>
+    </div>
+    <script src="./RecipeViewPage.js"></script>
+</body>
+<!-- <img src="." alt=""> -->
+</html>

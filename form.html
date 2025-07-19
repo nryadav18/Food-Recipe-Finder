@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Recipe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            margin-top: 0px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+        .form-group textarea {
+            height: 100px;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 0.875em;
+        }
+        .stars_container{
+            height: 50px;
+            display: flex;
+            gap: 5px;
+        }
+        .fa-star{
+            font-size: 1.5rem;
+            color:orange;
+        }
+        .fa-star:hover{
+            cursor: pointer;
+        }
+        .selected{
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center><h1>Add New Recipe</h1></center>
+        <form id="recipeForm">
+            <div class="form-group">
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" name="recipeName" required>
+                <div class="error" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="imageURL">Image URL:</label>
+                <input type="url" id="imageURL" name="imageURL" required>
+                <div class="error" id="imageURLError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="stars">Stars (1-5):</label>
+                <div class="stars_container">
+                    <div class="star" onclick="rate(1)"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" onclick="rate(2)"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" onclick="rate(3)"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" onclick="rate(4)"><i class="fa-regular fa-star"></i></div>
+                    <div class="star" onclick="rate(5)"><i class="fa-regular fa-star"></i></div>
+                </div>
+                <input type="hidden" id="stars" name="stars" required>
+                <div class="error" id="starsError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="" selected>Select category</option>
+                    <option value="appetizer">Appetizer</option>
+                    <option value="main_course">Main Course</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="beverage">Beverage</option>
+                </select>
+                <div class="error" id="categoryError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" required></textarea>
+                <div class="error" id="ingredientsError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="process">Process:</label>
+                <textarea id="process" name="process" required></textarea>
+                <div class="error" id="processError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="videoURL">Video URL:</label>
+                <input type="url" id="videoURL" name="videoURL">
+                <div class="error" id="videoURLError"></div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Add Recipe</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('recipeForm').addEventListener('submit', function(event) {
+            document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+            let valid = true;
+
+            const name = document.getElementById('recipeName').value.trim();
+            const imageURL = document.getElementById('imageURL').value.trim();
+            const stars = parseInt(document.getElementById('stars').value, 10);
+            const ingredients = document.getElementById('ingredients').value.trim();
+            const process = document.getElementById('process').value.trim();
+            const videoURL = document.getElementById('videoURL').value.trim();
+            const category = document.getElementById('category').value;
+
+            if (!name) {
+                document.getElementById('nameError').textContent = 'Recipe name is required.';
+                valid = false;
+            }
+
+            if (!imageURL) {
+                document.getElementById('imageURLError').textContent = 'Image URL is required.';
+                valid = false;
+            }
+
+            if (isNaN(stars) || stars < 1 || stars > 5) {
+                document.getElementById('starsError').textContent = 'Stars must be between 1 and 5.';
+                valid = false;
+            }
+
+            if (!ingredients) {
+                document.getElementById('ingredientsError').textContent = 'Ingredients are required.';
+                valid = false;
+            }
+
+            if (!process) {
+                document.getElementById('processError').textContent = 'Process is required.';
+                valid = false;
+            }
+
+            if (videoURL && !/^https?:\/\/.+/.test(videoURL)) {
+                document.getElementById('videoURLError').textContent = 'Invalid video URL.';
+                valid = false;
+            }
+
+            if (!category) {
+                document.getElementById('categoryError').textContent = 'Category is required.';
+                valid = false;
+            }
+
+            if (valid) {
+                const recipe = {
+                    name: name,
+                    imageURL: imageURL,
+                    stars: stars,
+                    ingredients: ingredients,
+                    process: process,
+                    videoURL: videoURL,
+                    category: category
+                };
+                console.log('Recipe added:', recipe);
+            }
+            else{
+                event.preventDefault();
+            }
+        });
+
+        const rate = (n) =>{
+            var stars = document.getElementsByClassName("fa-star");
+            for (let i = 0; i < stars.length; i++) {
+                if(i < n){
+                    stars[i].classList.remove('fa-regular');
+                    stars[i].classList.add('fa-solid', 'selected');
+                }
+                else{
+                    stars[i].classList.remove('fa-solid', 'selected');
+                    stars[i].classList.add("fa-regular");
+                } 
+            }
+            document.getElementById('stars').value = n;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- OM -->
+    <!-- <img src="" alt=""> -->
+    <div id="home">
+        <header>
+            <div class="logo">
+                <img src="../assets/images/logos/logo1.png" alt="">
+                <p><span>FOOD</span><br>is<br><span>DIVINE!</span></p>
+            </div>
+            <div class="mainhead">
+                <p class="nbhome"><a href="#cbody" style="user-select: none;">HOME</a></p>
+                <p class="nbrecipe"><a href="../../RecipePage/Recipe.html">RECIPES</a></p>
+                <p class="nbsupport"><a href="#suport">SUPPORT</a></p>
+                <div class="nbbutton" onclick="search()">
+                    <div class="input-wrapper">
+                        <div class="icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="but" name="Search" type="text">
+                            <p>Search</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-heart" onclick="cart()"></i>
+                <div class="logout"><i class="fa-solid fa-right-from-bracket" onclick="logout()"></i> </div>
+                <i class="fa-solid fa-bars" onclick="showThreeBars()"></i>
+            </div>
+        </header>
+        <div class="cbody" id="cbody">
+            <div class="cbleft">
+                <p data-aos="fade-left" data-aos-duration="900">Make Your<br><span>DREAM FOOD</span><br>With Us</p>
+            </div>
+            <div class="cbright">
+                <div class="cir" id="cir" style="overflow: hidden;">
+                    <img id="cirimg" data-aos="slide-up" data-aos-duration="900" src="../assets/images/girl/girl3.png"
+                        alt="">
+                </div>
+                <img src="../assets/images/food/burgers/burger1.png" alt="" id="burger">
+                <img src="../assets/images/food/pizza/pizza.png" alt="" id="pizza">
+                <img src="../assets/images/food/biriyani/biriyani2.png" alt="" id="biriyani">
+                <img src="../assets/images/food/icecream/icecream.png" alt="" id="icecream">
+            </div>
+        </div>
+        <div class="last">
+            <div class="one">
+                <p>500+<br><span>Reviews</span></p>
+                <p>5K+<br><span>Comments</span></p>
+            </div>
+            <div class="two">
+                <div class="tleft">
+                    <img src="../assets/images/users/hv1.png" alt="">
+                </div>
+                <div class="tright">
+                    <div class="trtop">
+                        <div class="trtc">
+                            <img src="../assets/images/users/saiChandu.jpeg" alt="">
+                        </div>
+                        <div class="trtc">
+                            <img src="../assets/images/users/deepthi.jpeg" alt="">
+                        </div>
+                        <div class="trtc">
+                            <img src="../assets/images/users/chandu.jpg" alt="">
+                        </div>
+                        <div class="trtc">
+                            <img src="../assets/images/users/manikanta.jpeg" alt="">
+                        </div>
+                        <div class="trtc">
+                            <img src="../assets/images/users/abhiram.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="trbottom">
+                        <p>2000+ Happy Users<br><span>4.8 Rating(500+ Reviews)</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="three">
+                <div class="tleft">
+                    <img src="../assets/images/food/allMixed/allmixed.jpg" alt="">
+                </div>
+                <div class="tdown">
+                    <p>Best Delicious Foods<br><span>We have the Best Collection of Food Recipes</span></p>
+                </div>
+            </div>
+        </div>
+
+
+        <footer id="suport">
+            <div class="fleft">
+                <img id="logo1" src="../assets/images/logos/logo3.png" alt="">
+                <img id="logo2" src="../assets/images/food/allMixed/veggies.png" alt="">
+            </div>
+            <div class="fmid">
+                <p>Dear Food Lovers,<br>Thank You for Visiting Our Recipe Finder!<br>
+                    <span>
+                        Warm Regards,<br>The Recipe Finder Team.
+                    </span>
+                </p>
+            </div>
+            <div class="fright">
+                <div class="frtop">
+                    <div class="sm">
+                        <div class="smb" id="linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <p>LINKEDIN</p>
+                        </div>
+                    </div>
+                    <div class="sm">
+                        <div class="smb" id="insta">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>INSTA</p>
+                        </div>
+                    </div>
+                    <div class="sm">
+                        <div class="smb" id="fb">
+                            <i class="fa-brands fa-facebook"></i>
+                            <p>FBOOK</p>
+                        </div>
+                    </div>
+                    <div class="sm">
+                        <div class="smb" id="twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <p>TWITTER</p>
+                        </div>
+                    </div>
+                    <div class="sm">
+                        <div class="smb" id="telegram">
+                            <i class="fa-brands fa-telegram"></i>
+                            <p>TELEGRAM</p>
+                        </div>
+                    </div>
+                    <div class="sm">
+                        <div class="smb" id="gmail" onclick="email()">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>EMAIL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="frbottom">
+                    CONTACT US
+                </div>
+            </div>
+        </footer>
+
+        <div class="mainLeft">
+            <div class="mainhead" id="mainhead">
+                <i class="fa-solid fa-x"
+                    style="position: relative; top: 10%; right: -40%; font-size: 25px; overflow: hidden;"
+                    onclick="hideThreeBars()"></i>
+                <img src="../assets/images/logos/logo1.png" style="height: 100px; width: 100px;" alt="">
+                <p class="nbhome"><a href="#cbody" style="user-select: none;">HOME</a></p>
+                <p class="nbrecipe"><a href="../../RecipePage/Recipe.html">RECIPES</a></p>
+                <p class="nbsupport"><a href="#suport">SUPPORT</a></p>
+                <div class="nbbutton">
+                    <div class="input-wrapper" onclick="search()">
+                        <div class="icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="but" name="Search" type="text">
+                            <p>Search</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./home.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module">AOS.init();</script>
+</body>
+
+</html>
