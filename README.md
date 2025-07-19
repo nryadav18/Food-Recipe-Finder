@@ -22,7 +22,7 @@
 <img src="./Web_Images/2.HomePageTop.png" alt="Home Page Top" width="100%" />
 
 ### 🏠 Home Page (Bottom)
-<img src="./Web_Images/3.HomePageBottom.png" alt="Home Page Bottom" width="100%" />
+<img src="./Web_Images/3.HomePageDown.png" alt="Home Page Bottom" width="100%" />
 
 ### 🍳 Recipes Page
 <img src="./Web_Images/4.RecipesListPage.png" alt="Recipes Page" width="100%" />
