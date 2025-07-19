@@ -16,7 +16,7 @@
 > Click on images to enlarge (if supported on GitHub)
 
 ### 🔐 Login Page
-<img src="./Web_Images/1LoginPage.png" alt="Login Page" width="100%" />
+<img src="./Web_Images/1.LoginPage.png" alt="Login Page" width="100%" />
 
 ### 🏠 Home Page (Top)
 <img src="./Web_Images/2.HomePageTop.png" alt="Home Page Top" width="100%" />
