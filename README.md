@@ -37,10 +37,10 @@
 <img src="./Web_Images/7.RecipeSearchPage.png" alt="Item Searching Page" width="100%" />
 
 ### 🍲 Searched Item View Page
-<img src="./Web_Images/8.SearchedRecipeViewPage.png" alt="Searched Item View Page" width="100%" />
+<img src="./Web_Images/8.SearchedRecipeVIewPage.png" alt="Searched Item View Page" width="100%" />
 
 ### 💔 Empty Wishlist Page
-<img src="./screenshots/9.EmptyWishlistPage.png" alt="Empty Wishlist Page" width="100%" />
+<img src="./Web_Images/9.EmptyWishlistPage.png" alt="Empty Wishlist Page" width="100%" />
 
 ---
 
