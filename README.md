@@ -55,8 +55,8 @@
 
 - HTML5
 - CSS3
-- Bootstrap 5
-- JavaScript (Vanilla JS)
+- JavaScript
+- Local Storage/ Sessional Storage
 
 ---
 
