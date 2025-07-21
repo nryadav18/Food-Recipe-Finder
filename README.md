@@ -47,7 +47,7 @@
 ## 🚀 Live Demo
 
 > Add your GitHub Pages or deployed live site link here  
-🌐 [Live Preview](https://your-live-link.com)
+🌐 [Live Preview](https://food-recipe-finder-two.vercel.app)
 
 ---
 
