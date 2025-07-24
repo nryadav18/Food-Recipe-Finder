@@ -77,9 +77,15 @@
 > Follow these steps to run the project locally
 
 # Clone the repository
+```bash
 git clone https://github.com/nryadav18/food-recipe-finder.git
+```
 
 # Navigate to the project folder
+```bash
 cd food-recipe-finder
+```
 
-# Open the index.html file in your browser
+## Open the index.html file in your Browser
+### or 
+## Open the index.html file in you VSC and Start the Development Server
