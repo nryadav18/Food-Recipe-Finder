@@ -86,6 +86,6 @@ git clone https://github.com/nryadav18/food-recipe-finder.git
 cd food-recipe-finder
 ```
 
-## Open the index.html file in your Browser
+### Open the index.html file in your Browser
 ### or 
-## Open the index.html file in you VSC and Start the Development Server
+### Open the index.html file in you VSC and Start the Development Server
